@@ -30,6 +30,7 @@ li {
   color: #070d59;
   font-size: 15px;
   padding: 0;
+  text-transform: capitalize;
 }
 
 strong {
