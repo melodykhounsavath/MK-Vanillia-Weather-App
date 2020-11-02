@@ -39,8 +39,19 @@ function displayTemperature(response) {
     iconElement.setAttribute("alt", conditionElement.innerHTML = response.data.weather[0].description);
 }
 
+function search(city) {
 let apiKey = "63f2d724151d398c21d686753801c73b";
-let city = "Anchorage";
 let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
 axios.get(apiURL).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+    event.preventDefault();
+    let locationInputElement = document.querySelector("#location-input")
+    search(locationInputElement.value)
+}
+
+search("Anchorage");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
