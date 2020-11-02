@@ -7,6 +7,8 @@ body {
   padding: 20px;
   border: 2px solid #1f3c88;
   border-radius: 5px;
+  margin: 20px auto;
+  overflow: auto;
 }
 
 h1 {
@@ -37,6 +39,10 @@ strong {
   font-size: 54px;
   margin-left: 15px;
   font-weight: 100;
+}
+
+small {
+  padding: 20px;
 }
 
 .units {
